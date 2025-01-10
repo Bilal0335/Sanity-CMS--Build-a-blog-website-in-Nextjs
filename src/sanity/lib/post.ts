@@ -3,7 +3,7 @@ import { defineField, defineArrayMember, defineType } from 'sanity'
 export const post = defineType({
   name: 'post',
   type: 'document',
-  title: 'Post Doc',
+  title: 'Post',
   fields: [
     defineField({
       name: 'title',
@@ -30,6 +30,7 @@ export const post = defineType({
       title: 'Summary',
       description: 'Summary of the post'
     }),
+
     defineField({
       name: 'author',
       type: 'reference',
@@ -37,6 +38,7 @@ export const post = defineType({
       to: [{ type: 'author' }],
       description: 'Author of the post'
     }),
+
     defineField({
       name: 'image',
       type: 'image',
@@ -44,6 +46,7 @@ export const post = defineType({
       description: 'Image for the post'
     }),
 
+    // Uncomment this block if you want to include a rich-text content editor
     // defineField({
     //   name: 'content',
     //   type: 'array',
@@ -122,7 +125,7 @@ export const post = defineType({
           ]
         })
       ]
-    })
+    }),
 
     // Uncomment the block below to add a 'gender' field with options
     /*
